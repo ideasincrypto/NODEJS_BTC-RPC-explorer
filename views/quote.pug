@@ -1,0 +1,10 @@
+extends layout
+
+block headContent
+	title #{coinConfig.name} Quote ##{quoteIndex}
+
+block content
+	+pageTitle(`${coinConfig.name} Quote #${quoteIndex}`)
+
+	+contentSection
+		+quote(btcQuotes[quoteIndex], -1, true)
